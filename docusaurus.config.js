@@ -4,6 +4,10 @@ const config = {
   title: 'Orcavia',
   tagline: 'Blender add-ons, production tools, and 3D portfolio work.',
   favicon: 'img/orcavia-icon.svg',
+  future: {
+    v4: true,
+    faster: true,
+  },
   url: 'https://orcavia.github.io',
   baseUrl: '/',
   organizationName: 'orcavia',
@@ -34,6 +38,11 @@ const config = {
   ],
   themeConfig: {
     image: 'img/orcavia-logo.svg',
+    metadata: [
+      { name: 'keywords', content: 'Orcavia, Blender add-ons, Blender tools, UV tools, 3D portfolio' },
+      { name: 'author', content: 'Orcavia' },
+      { property: 'og:type', content: 'website' },
+    ],
     navbar: {
       title: 'Orcavia',
       logo: {

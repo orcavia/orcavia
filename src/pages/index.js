@@ -129,7 +129,13 @@ export default function Home() {
         <section className="hero">
           <div className="hero__inner">
             <div className="brandPanel" aria-label="Orcavia brand mark">
-              <img src="/img/orcavia-logo.svg" alt="Orcavia logo" />
+              <img
+                src="/img/orcavia-logo.svg"
+                alt="Orcavia logo"
+                width="1366"
+                height="768"
+                fetchPriority="high"
+              />
             </div>
             <div className="hero__copy">
               <p className="eyebrow">Blender add-ons and 3D production assets</p>
@@ -178,7 +184,7 @@ export default function Home() {
         <section className="portfolio" id="portfolio">
           <div className="pageShell portfolio__inner">
             <div className="portfolio__copy">
-              <h2 id="portfolio">Tools and assets made around practical Blender production.</h2>
+              <h2>Tools and assets made around practical Blender production.</h2>
               <Link className="buttonPrimary buttonPrimary--dark" href="https://superhivemarket.com/creators/orcavia">
                 Open Superhive creator page
               </Link>
