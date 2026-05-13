@@ -8,7 +8,7 @@ const config = {
     v4: true,
     faster: true,
   },
-  url: 'https://orcavia.github.io',
+  url: 'https://orcavia.dev',
   baseUrl: '/',
   organizationName: 'orcavia',
   projectName: 'orcavia',
@@ -37,7 +37,7 @@ const config = {
     ],
   ],
   themeConfig: {
-    image: 'img/orcavia-logo.svg',
+    image: 'https://orcavia.dev/img/orcavia-logo.svg',
     metadata: [
       { name: 'keywords', content: 'Orcavia, Blender add-ons, Blender tools, UV tools, 3D portfolio' },
       { name: 'author', content: 'Orcavia' },

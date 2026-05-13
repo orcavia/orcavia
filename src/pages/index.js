@@ -139,6 +139,7 @@ export default function Home() {
             </div>
             <div className="hero__copy">
               <p className="eyebrow">Blender add-ons and 3D production assets</p>
+              <h1>Orcavia Blender Add-ons and 3D Production Tools</h1>
               <p className="hero__lead">
                 Self-taught developer and 3D artist creating Blender add-ons, production tools, and game-ready assets from practical everyday workflow needs.
               </p>
