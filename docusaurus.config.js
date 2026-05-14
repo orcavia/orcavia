@@ -4,6 +4,25 @@ const config = {
   title: 'Orcavia',
   tagline: 'Blender add-ons, production tools, and 3D portfolio work.',
   favicon: 'favicon.ico',
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '192x192',
+        href: '/favicon-192.png',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'apple-touch-icon',
+        sizes: '192x192',
+        href: '/favicon-192.png',
+      },
+    },
+  ],
   future: {
     v4: true,
     faster: true,
@@ -42,25 +61,6 @@ const config = {
       { name: 'keywords', content: 'Orcavia, Blender add-ons, Blender tools, UV tools, 3D portfolio' },
       { name: 'author', content: 'Orcavia' },
       { property: 'og:type', content: 'website' },
-    ],
-    headTags: [
-      {
-        tagName: 'link',
-        attributes: {
-          rel: 'icon',
-          type: 'image/png',
-          sizes: '192x192',
-          href: '/favicon-192.png',
-        },
-      },
-      {
-        tagName: 'link',
-        attributes: {
-          rel: 'apple-touch-icon',
-          sizes: '192x192',
-          href: '/favicon-192.png',
-        },
-      },
     ],
     navbar: {
       title: 'Orcavia',
