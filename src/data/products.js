@@ -3,7 +3,7 @@ const products = [
     name: 'Easeam',
     slug: 'easeam',
     href: 'https://superhivemarket.com/products/easeam',
-    docsHref: 'https://orcavia.github.io/Easeam-doc/',
+    docsHref: 'https://orcavia.dev/Easeam-doc/',
     eyebrow: 'UV tools',
     title: 'Easeam Blender UV Tools',
     summary: 'Fast seam marking and unwrap workflow tools for Blender, including flat-area seams, edge loops, tube seams, sharp-edge seams, and Y-verts seam detection.',
