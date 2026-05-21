@@ -11,6 +11,15 @@ const config = {
       attributes: {
         rel: 'icon',
         type: 'image/png',
+        sizes: '48x48',
+        href: '/favicon-48.png',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'icon',
+        type: 'image/png',
         sizes: '192x192',
         href: '/favicon-192.png',
       },
