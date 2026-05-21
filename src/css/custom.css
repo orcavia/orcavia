@@ -334,6 +334,11 @@ body {
   color: #fff;
 }
 
+.cardLink--details {
+  border-color: rgba(215, 25, 32, 0.3);
+  color: #d71920;
+}
+
 .cardLink--docs:hover,
 .cardLink--docs:focus {
   background: #d71920;
@@ -359,6 +364,92 @@ body {
   max-width: 880px;
 }
 
+.productPage {
+  background: var(--page-bg);
+}
+
+.productHero {
+  padding: 112px 0 74px;
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+
+.productHero__inner {
+  max-width: 860px;
+}
+
+.productHero h1 {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(2.25rem, 5vw, 4.6rem);
+  line-height: 1.02;
+  letter-spacing: 0;
+}
+
+.productHero p:not(.eyebrow) {
+  max-width: 760px;
+  margin: 24px 0 0;
+  color: #4a4a4a;
+  font-size: 1.18rem;
+  line-height: 1.7;
+}
+
+.productHero--red { border-top: 5px solid #d71920; }
+.productHero--silver { border-top: 5px solid #8f989f; }
+.productHero--blue { border-top: 5px solid #2865c7; }
+.productHero--teal { border-top: 5px solid #008e8a; }
+.productHero--amber { border-top: 5px solid #c77a00; }
+.productHero--violet { border-top: 5px solid #7551c8; }
+.productHero--green { border-top: 5px solid #3a8d44; }
+
+.productDetail {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+  gap: 36px;
+  align-items: start;
+}
+
+.productDetail h2 {
+  margin: 0 0 16px;
+  font-size: clamp(1.8rem, 3vw, 2.55rem);
+  letter-spacing: 0;
+}
+
+.productDetail p {
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.72;
+}
+
+.featureList {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.featureList li {
+  padding: 18px 18px 18px 44px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: #343434;
+  line-height: 1.6;
+  position: relative;
+}
+
+.featureList li::before {
+  position: absolute;
+  left: 18px;
+  top: 24px;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #d71920;
+  content: "";
+}
+
 @media (max-width: 996px) {
   .brandPanel {
     min-height: 280px;
@@ -366,6 +457,10 @@ body {
 
   .productGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .productDetail {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -413,6 +508,10 @@ body {
   .section,
   .portfolio {
     padding: 58px 0;
+  }
+
+  .productHero {
+    padding: 72px 0 52px;
   }
 
   .productCard {

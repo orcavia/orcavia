@@ -2,65 +2,13 @@ import React from 'react';
 import Head from '@docusaurus/Head';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
+import products from '../data/products';
 
 const socials = [
   { label: 'ArtStation', href: 'https://www.artstation.com/orcavia', icon: 'artstation' },
   { label: 'Superhive', href: 'https://superhivemarket.com/creators/orcavia', icon: 'superhive' },
   { label: 'YouTube', href: 'https://www.youtube.com/@orcavia9123', icon: 'youtube' },
   { label: 'Email', href: 'mailto:mutar.orcavia@gmail.com', icon: 'email' },
-];
-
-const products = [
-  {
-    name: 'Easeam',
-    href: 'https://superhivemarket.com/products/easeam',
-    docsHref: 'https://orcavia.github.io/Easeam-doc/',
-    eyebrow: 'UV tools',
-    summary: 'Fast seam marking and unwrap workflow tools for Blender, including flat-area seams, edge loops, tube seams, sharp-edge seams, and Y-verts seam detection.',
-    accent: 'red',
-  },
-  {
-    name: 'ShadingMod',
-    href: 'https://superhivemarket.com/products/shadingmod',
-    eyebrow: 'Shading repair',
-    summary: 'A compact toolbox for fixing common mesh shading issues, smoothing normals, and cleaning hard-surface presentation inside Blender.',
-    accent: 'silver',
-  },
-  {
-    name: 'QuickMod',
-    href: 'https://superhivemarket.com/products/quickmod',
-    eyebrow: 'Modifier workflow',
-    summary: 'Quick modal access to everyday modifiers such as Array, Bevel, Mirror, Remesh, Screw, Solidify, Wireframe, Boolean, Curve, Lattice, and more.',
-    accent: 'blue',
-  },
-  {
-    name: 'MirrorPro',
-    href: 'https://superhivemarket.com/products/mirrorpro',
-    eyebrow: 'Modeling utility',
-    summary: 'One-click mirroring and symmetrizing in any axis direction with an interactive gizmo for faster hard-surface and asset modeling.',
-    accent: 'teal',
-  },
-  {
-    name: 'Duplicator',
-    href: 'https://superhivemarket.com/products/duplicator',
-    eyebrow: 'Object duplication',
-    summary: 'Duplicate objects with array, circular, and helper workflows, plus tools for separating arrayed objects and randomizing transforms.',
-    accent: 'amber',
-  },
-  {
-    name: 'Armacurve',
-    href: 'https://superhivemarket.com/products/armacurve---easy-rig-curve-object',
-    eyebrow: 'Curve rigging',
-    summary: 'Instant curve rigging tools for converting curves to bones, quick Bezier curve rigs, and adding helper objects to curve points.',
-    accent: 'violet',
-  },
-  {
-    name: 'MultiLattice',
-    href: 'https://superhivemarket.com/products/multilattice',
-    eyebrow: 'Deformation setup',
-    summary: 'One-click lattice setup for object and edit mode, including grouped multi-object lattice deformation and quick lattice adjustment.',
-    accent: 'green',
-  },
 ];
 
 const pageDescription =
@@ -152,6 +100,9 @@ function ProductCard({ product }) {
       <div className="cardActions">
         <Link className="cardLink" href={product.href}>
           View product
+        </Link>
+        <Link className="cardLink cardLink--details" to={`/products/${product.slug}`}>
+          Details
         </Link>
         {product.docsHref && (
           <Link className="cardLink cardLink--docs" href={product.docsHref}>
