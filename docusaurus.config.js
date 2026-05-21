@@ -51,7 +51,7 @@ const config = {
         docs: false,
         blog: false,
         sitemap: {
-          changefreq: 'weekly',
+          changefreq: 'daily',
           priority: 0.8,
         },
         theme: {
