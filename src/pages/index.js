@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from '@docusaurus/Head';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 
@@ -62,6 +63,55 @@ const products = [
   },
 ];
 
+const pageDescription =
+  'Orcavia creates practical Blender add-ons, UV tools, modifier workflow utilities, mirroring helpers, curve rigging tools, lattice deformation tools, and game-ready 3D assets.';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://orcavia.dev/#organization',
+      name: 'Orcavia',
+      url: 'https://orcavia.dev/',
+      logo: 'https://orcavia.dev/img/orcavia-logo.svg',
+      sameAs: [
+        'https://superhivemarket.com/creators/orcavia',
+        'https://www.artstation.com/orcavia',
+        'https://www.youtube.com/@orcavia9123',
+        'https://discord.gg/MznXAXeYQN',
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://orcavia.dev/#website',
+      url: 'https://orcavia.dev/',
+      name: 'Orcavia',
+      description: pageDescription,
+      publisher: { '@id': 'https://orcavia.dev/#organization' },
+      inLanguage: 'en',
+    },
+    {
+      '@type': 'ItemList',
+      '@id': 'https://orcavia.dev/#products',
+      name: 'Orcavia Blender add-ons',
+      itemListElement: products.map((product, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'SoftwareApplication',
+          name: product.name,
+          applicationCategory: 'Blender Add-on',
+          operatingSystem: 'Windows, macOS, Linux',
+          url: product.href,
+          description: product.summary,
+          creator: { '@id': 'https://orcavia.dev/#organization' },
+        },
+      })),
+    },
+  ],
+};
+
 function Icon({ name }) {
   const paths = {
     discord: (
@@ -117,9 +167,13 @@ function ProductCard({ product }) {
 export default function Home() {
   return (
     <Layout
-      title="Blender Add-ons and Portfolio"
-      description="Orcavia product front page for Blender add-ons, 3D assets, and portfolio links."
+      title="Blender Add-ons, UV Tools, and 3D Portfolio"
+      description={pageDescription}
     >
+      <Head>
+        <link rel="canonical" href="https://orcavia.dev/" />
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+      </Head>
       <main>
         <Link className="floatingDiscord" href="https://discord.gg/MznXAXeYQN">
           <Icon name="discord" />
@@ -171,6 +225,7 @@ export default function Home() {
         <section className="section pageShell" id="products">
           <div className="sectionHeader">
             <p className="eyebrow">Products</p>
+            <h2>Blender add-ons by Orcavia</h2>
             <p>
               Practical Blender add-ons built to support everyday modelling workflows, from UV cleanup and modifier handling to mirroring, duplication, curve rigs, and lattice deformation.
             </p>
