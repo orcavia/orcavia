@@ -53,7 +53,7 @@ export default function ProductPage({ product }) {
               </Link>
               {product.docsHref && (
                 <Link className="buttonSecondary" href={product.docsHref}>
-                  Open documentation
+                  {product.docsLabel || 'Open documentation'}
                 </Link>
               )}
             </div>

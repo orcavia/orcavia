@@ -4,6 +4,8 @@ const products = [
     slug: 'easeam',
     href: 'https://superhivemarket.com/products/easeam',
     docsHref: 'https://orcavia.dev/Easeam-doc/',
+    docsLabel: 'Easeam 2 Blender UV seam marking and unwrap documentation',
+    docsCardLabel: 'Easeam 2 UV seam docs',
     eyebrow: 'UV tools',
     title: 'Easeam Blender UV Tools',
     summary: 'Fast seam marking and unwrap workflow tools for Blender, including flat-area seams, edge loops, tube seams, sharp-edge seams, and Y-verts seam detection.',

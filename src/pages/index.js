@@ -54,11 +54,35 @@ const structuredData = {
           url: product.href,
           description: product.summary,
           creator: { '@id': 'https://orcavia.dev/#organization' },
+          subjectOf: product.docsHref
+            ? {
+                '@type': 'TechArticle',
+                name: product.docsLabel || product.name + ' documentation',
+                url: product.docsHref,
+              }
+            : undefined,
         },
       })),
     },
+    {
+      '@type': 'TechArticle',
+      '@id': 'https://orcavia.dev/Easeam-doc/#documentation',
+      name: 'Easeam 2 Blender UV seam marking and unwrap documentation',
+      url: 'https://orcavia.dev/Easeam-doc/',
+      about: [
+        'Blender add-on',
+        'UV seam marking',
+        'Blender unwrap workflow',
+        'UV island cleanup',
+        'UV map management',
+      ],
+      isPartOf: { '@id': 'https://orcavia.dev/#website' },
+      publisher: { '@id': 'https://orcavia.dev/#organization' },
+    },
   ],
 };
+
+const easeamProduct = products.find((product) => product.slug === 'easeam');
 
 function Icon({ name }) {
   const paths = {
@@ -107,7 +131,7 @@ function ProductCard({ product }) {
         {product.docsHref && (
           <Link className="cardLink cardLink--docs" href={product.docsHref}>
             <Icon name="docs" />
-            Documentation
+            {product.docsCardLabel || product.docsLabel || 'Documentation'}
           </Link>
         )}
       </div>
@@ -172,6 +196,27 @@ export default function Home() {
             ))}
           </div>
         </section>
+
+        {easeamProduct && (
+          <section className="docsSpotlight" aria-labelledby="easeam-docs-title">
+            <div className="pageShell docsSpotlight__inner">
+              <div>
+                <p className="eyebrow">Featured documentation</p>
+                <h2 id="easeam-docs-title">Easeam 2 Blender UV seam and unwrap documentation</h2>
+                <p>
+                  Learn the Easeam 2 workflow for Blender UV seam marking, unwrap passes,
+                  UV island cleanup, and UV map management. Start from the docs index, then
+                  jump into operator guides for seam loops, tube seams, flat-area seams,
+                  Re-Unwrap, and UV Maps Manager.
+                </p>
+              </div>
+              <Link className="buttonPrimary docsSpotlight__link" href={easeamProduct.docsHref}>
+                <Icon name="docs" />
+                {easeamProduct.docsLabel}
+              </Link>
+            </div>
+          </section>
+        )}
 
         <section className="section pageShell" id="products">
           <div className="sectionHeader">
