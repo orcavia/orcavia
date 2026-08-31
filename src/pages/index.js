@@ -12,7 +12,7 @@ const socials = [
 ];
 
 const pageDescription =
-  'Orcavia creates practical Blender add-ons, UV tools, modifier workflow utilities, mirroring helpers, curve rigging tools, lattice deformation tools, and game-ready 3D assets.';
+  'Orcavia creates Tridi Viewer, a fast native 3D model viewer for Windows, alongside practical Blender add-ons and 3D production tools.';
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -38,6 +38,18 @@ const structuredData = {
       description: pageDescription,
       publisher: { '@id': 'https://orcavia.dev/#organization' },
       inLanguage: 'en',
+    },
+    {
+      '@type': 'SoftwareApplication',
+      '@id': 'https://tridi.orcavia.dev/#app',
+      name: 'Tridi Viewer',
+      applicationCategory: 'MultimediaApplication',
+      operatingSystem: 'Windows 10, Windows 11',
+      url: 'https://tridi.orcavia.dev/',
+      downloadUrl: 'https://apps.microsoft.com/detail/9NQPGMHZXFDR',
+      description:
+        'A lightweight native 3D model viewer for Windows with real-time PBR rendering, wide format support, material inspection, animation playback, UV views, and model export.',
+      creator: { '@id': 'https://orcavia.dev/#organization' },
     },
     {
       '@type': 'ItemList',
@@ -81,8 +93,6 @@ const structuredData = {
     },
   ],
 };
-
-const easeamProduct = products.find((product) => product.slug === 'easeam');
 
 function Icon({ name }) {
   const paths = {
@@ -142,7 +152,7 @@ function ProductCard({ product }) {
 export default function Home() {
   return (
     <Layout
-      title="Blender Add-ons, UV Tools, and 3D Portfolio"
+      title="3D Viewer, Blender Add-ons, and Production Tools"
       description={pageDescription}
     >
       <Head>
@@ -167,15 +177,15 @@ export default function Home() {
               />
             </div>
             <div className="hero__copy">
-              <p className="eyebrow">Blender add-ons and 3D production assets</p>
-              <h1>Orcavia Blender Add-ons and 3D Production Tools</h1>
+              <p className="eyebrow">3D viewing, Blender add-ons, and production assets</p>
+              <h1>Practical 3D tools built by Orcavia</h1>
               <p className="hero__lead">
-                Self-taught developer and 3D artist creating Blender add-ons, production tools, and game-ready assets from practical everyday workflow needs.
+                Native Windows software and Blender add-ons created by a 3D artist to make everyday inspection, modelling, and production workflows faster.
               </p>
               <div className="hero__actions">
-                <Link className="buttonPrimary" to="#products">
+                <Link className="buttonPrimary" to="#featured">
                   <Icon name="grid" />
-                  Browse products
+                  Explore products
                 </Link>
                 <Link className="buttonSecondary" href="https://www.artstation.com/orcavia">
                   <Icon name="external" />
@@ -197,31 +207,52 @@ export default function Home() {
           </div>
         </section>
 
-        {easeamProduct && (
-          <section className="docsSpotlight" aria-labelledby="easeam-docs-title">
-            <div className="pageShell docsSpotlight__inner">
-              <div>
-                <p className="eyebrow">Featured documentation</p>
-                <h2 id="easeam-docs-title">Easeam 2 Blender UV seam and unwrap documentation</h2>
-                <p>
-                  Learn the Easeam 2 workflow for Blender UV seam marking, unwrap passes,
-                  UV island cleanup, and UV map management. Start from the docs index, then
-                  jump into operator guides for seam loops, tube seams, flat-area seams,
-                  Re-Unwrap, and UV Maps Manager.
-                </p>
-              </div>
-              <Link className="buttonPrimary docsSpotlight__link" href={easeamProduct.docsHref}>
-                <Icon name="docs" />
-                {easeamProduct.docsLabel}
-              </Link>
+        <section className="featuredProduct" id="featured" aria-labelledby="tridi-title">
+          <div className="pageShell featuredProduct__inner">
+            <div className="featuredProduct__media">
+              <img
+                src="https://tridi.orcavia.dev/assets/screenshots/main_overview.webp"
+                alt="Tridi Viewer displaying a detailed, fully textured 3D sofa model"
+                width="1038"
+                height="734"
+                loading="lazy"
+                decoding="async"
+              />
+              <span className="featuredProduct__badge">Public Beta</span>
             </div>
-          </section>
-        )}
+            <div className="featuredProduct__content">
+              <p className="eyebrow">Featured product</p>
+              <h2 id="tridi-title">Tridi Viewer</h2>
+              <p>
+                Open and inspect modern 3D files instantly from File Explorer. Tridi Viewer
+                combines native C++ performance with real-time PBR rendering, source
+                wireframes, UV inspection, animation playback, material tools, and export.
+              </p>
+              <ul className="featuredProduct__features">
+                <li>Wide support for glTF, FBX, OBJ, USD, Alembic, CAD, and more</li>
+                <li>High-quality real-time rendering powered by Filament</li>
+                <li>Built natively for Windows with Explorer integration</li>
+              </ul>
+              <div className="featuredProduct__actions">
+                <Link className="buttonPrimary" href="https://tridi.orcavia.dev/">
+                  Explore Tridi Viewer
+                </Link>
+                <Link
+                  className="buttonSecondary buttonSecondary--light"
+                  href="https://apps.microsoft.com/detail/9NQPGMHZXFDR"
+                >
+                  <Icon name="external" />
+                  Get it from Microsoft Store
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <section className="section pageShell" id="products">
           <div className="sectionHeader">
-            <p className="eyebrow">Products</p>
-            <h2>Blender add-ons by Orcavia</h2>
+            <p className="eyebrow">Blender add-ons</p>
+            <h2>More tools by Orcavia</h2>
             <p>
               Practical Blender add-ons built to support everyday modelling workflows, from UV cleanup and modifier handling to mirroring, duplication, curve rigs, and lattice deformation.
             </p>
