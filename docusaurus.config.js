@@ -2,7 +2,7 @@
 
 const config = {
   title: 'Orcavia',
-  tagline: 'Blender add-ons, production tools, and 3D portfolio work.',
+  tagline: 'Tridi Viewer, Blender add-ons, and practical 3D production tools.',
   favicon: 'favicon.ico',
   titleDelimiter: '|',
   headTags: [
@@ -72,18 +72,18 @@ const config = {
   themeConfig: {
     image: 'https://orcavia.dev/img/orcavia-logo.svg',
     metadata: [
-      { name: 'description', content: 'Orcavia creates Blender add-ons, UV tools, modifier workflow utilities, mirroring tools, curve rigging helpers, and game-ready 3D assets.' },
-      { name: 'keywords', content: 'Orcavia, Blender add-ons, Blender tools, Blender UV tools, Easeam, ShadingMod, QuickMod, MirrorPro, Duplicator, Armacurve, MultiLattice, 3D portfolio' },
+      { name: 'description', content: 'Orcavia creates Tridi Viewer, a fast native 3D model viewer for Windows, alongside practical Blender add-ons and 3D production tools.' },
+      { name: 'keywords', content: 'Orcavia, Tridi Viewer, Windows 3D viewer, 3D model viewer, Blender add-ons, Blender tools, Blender UV tools, Easeam, ShadingMod, QuickMod, MirrorPro, Duplicator, Armacurve, MultiLattice' },
       { name: 'author', content: 'Orcavia' },
       { property: 'og:type', content: 'website' },
       { property: 'og:site_name', content: 'Orcavia' },
-      { property: 'og:title', content: 'Orcavia | Blender Add-ons and 3D Production Tools' },
-      { property: 'og:description', content: 'Blender add-ons and production tools for UV cleanup, modifiers, mirroring, duplication, curve rigging, lattice deformation, and 3D asset workflows.' },
+      { property: 'og:title', content: 'Orcavia | Tridi Viewer and 3D Production Tools' },
+      { property: 'og:description', content: 'Tridi Viewer for fast 3D inspection on Windows, plus practical Blender add-ons and production tools by Orcavia.' },
       { property: 'og:url', content: 'https://orcavia.dev/' },
       { property: 'og:image', content: 'https://orcavia.dev/img/orcavia-logo.svg' },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:title', content: 'Orcavia | Blender Add-ons and 3D Production Tools' },
-      { name: 'twitter:description', content: 'Practical Blender add-ons, UV tools, modifier utilities, and 3D portfolio work by Orcavia.' },
+      { name: 'twitter:title', content: 'Orcavia | Tridi Viewer and 3D Production Tools' },
+      { name: 'twitter:description', content: 'Tridi Viewer for Windows, practical Blender add-ons, and 3D production tools by Orcavia.' },
       { name: 'twitter:image', content: 'https://orcavia.dev/img/orcavia-logo.svg' },
     ],
     navbar: {
@@ -93,6 +93,7 @@ const config = {
         src: 'img/orcavia-icon.svg',
       },
       items: [
+        { href: 'https://tridi.orcavia.dev/', label: 'Tridi Viewer', position: 'right' },
         { to: '/#products', label: 'Products', position: 'right' },
         { to: '/#portfolio', label: 'Portfolio', position: 'right' },
         { href: 'https://superhivemarket.com/creators/orcavia', label: 'Superhive', position: 'right' },
